@@ -47,5 +47,5 @@ console.log(population > 33);
 let description = country + ' is in ' + continent + ' and it has ' + population + ' million people speak ' + language;
 console.log(description);
 
-// LECTURE 17:BASIC OPERATORS
+// LECTURE 17:STRINGS AND TEMPLATE LITERALS
 description = `${country} is in ${continent} and it has ${population} million people speak ${language}`;
