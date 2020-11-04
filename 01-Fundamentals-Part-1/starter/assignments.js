@@ -1,4 +1,5 @@
 //LECTURE 10: VALUES AND VARIABLES
+console.log(`----------ASSIGNMENTS----------`)
 country = 'Turkey', continent = 'Eurasia',
     population = 85;
 
