@@ -50,3 +50,13 @@ console.log(description);
 
 // LECTURE 17:STRINGS AND TEMPLATE LITERALS
 description = `${country} is in ${continent} and it has ${population} million people speak ${language}`;
+
+// LECTURE 18: TAKING DECISIONS: IF/ELSE STATEMENTS
+
+if (population > 33) {
+    console.log(`${country}'s population is above than average.`);
+} else {
+    console.log(`${country}'s population ${33 - population} million below average.`);
+};
+
+
