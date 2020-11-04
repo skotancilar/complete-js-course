@@ -59,7 +59,7 @@ if (population > 33) {
     console.log(`${country}'s population ${33 - population} million below average.`);
 };
 
-// LECTURE 18: EQUALITY OPERATORS: == VS. ===
+// LECTURE 22: EQUALITY OPERATORS: == VS. ===
 
 //1
 /*const numNeighbors = Number(prompt(`How many counties does your country have?`));*/
@@ -72,4 +72,10 @@ if (numNeighbors === 1) {
     console.log(`No borders!`);
 };
 
+// LECTURE 22: THE CONDITIONAL (TERNARY OPERATOR)
 
+const isBelow = population > 33 ? 'above 🔼' : 'below 🔽'
+
+console.log(`${country}'s population is ${isBelow} than average.`)
+
+population > 33 ? console.log(`${country}'s population is above than average.`) : console.log(`${country}'s population ${33 - population} million below average.`);

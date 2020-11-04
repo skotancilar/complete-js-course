@@ -70,6 +70,7 @@ if (century % 10 === 1) {
 
 console.log(`${ century } ${ rank } century`);
 */
+/*
 /////////////// CODING CHALANGE 3 ////////////////
 averageDolphins = (97 + 112 + 101) / 3;
 averageKoalas = (109 + 95 + 106) / 3;
@@ -95,4 +96,39 @@ if ((averageDolphins > averageKoalas) && (averageDolphins >= 100)) {
     console.log(`DRAW!`);
 } else {
     console.log(`NO Winner`);
-}
+};
+*/
+/*
+const day = 'pazartesi'
+
+switch (day) {
+    case "pazartesi":
+        console.log('Pazartesi haftanın ilk günü');
+        break;
+    case 'sali':
+        console.log('Salı sallanır.');
+        break;
+    case 'carsamba':
+        console.log('Çarşamba çarşafa dolanır.')
+        break;
+    case 'persembe':
+        console.log('Perşembe perişan olur.')
+        break;
+    case 'cuma':
+        console.log('Cuma mubarek gün.')
+        break;
+    case 'cumartesi':
+    case 'pazar':
+        console.log('Resmi Tatil!')
+        break;
+    default:
+        console.log('Böyle bir haftanın günü yoktur. Kontrol edip tekrar deneyiniz.')
+
+};
+*/
+
+const bill = 430;
+
+const tip = bill > 50 && bill < 300 ? bill * .15 : bill * .2;
+
+console.log(`The bill was ${bill}$, the tip was ${tip}$ and the total value is ${bill + tip}$.`)
