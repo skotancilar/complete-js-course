@@ -59,4 +59,17 @@ if (population > 33) {
     console.log(`${country}'s population ${33 - population} million below average.`);
 };
 
+// LECTURE 18: EQUALITY OPERATORS: == VS. ===
+
+//1
+const numNeighbors = Number(prompt(`How many counties does your country have?`));
+// 2-3-4-5-6-7
+if (numNeighbors === 1) {
+    console.log(`Only ${numNeighbors} border!`);
+} else if (numNeighbors > 1) {
+    console.log(`More than 1 border!`);
+} else if (numNeighbors === 0) {
+    console.log(`No borders!`);
+};
+
 

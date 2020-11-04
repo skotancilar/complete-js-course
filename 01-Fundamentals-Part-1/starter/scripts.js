@@ -22,16 +22,22 @@ MarkHigherBmi = markBMI1 > johnBMI1;
 
 console.log(MarkHigherBmi);
 
-const std = setToDecimal = (el, para) => {
+/*const std = setToDecimal = (el, para) => {
     return parseFloat((el.toFixed(para)));
-}
+}*/
 
 if (markBMI1 > johnBMI1) {
-    console.log(`Mark's BMI (${std(markBMI1, 2)}) is higher than John's BMI (${std(johnBMI1, 2)})`);
+    console.log(`Mark's BMI (${markBMI1.toFixed(2)}) is higher than John's BMI (${johnBMI1.toFixed(2)})`);
 } else {
-    console.log(`John's BMI (${std(johnBMI1, 2)}) is lower than Mark's BMI (${std(markBMI1, 2)})!`);
+    console.log(`John's BMI (${johnBMI1.toFixed(2)}) is higher than Mark's BMI (${markBMI1.toFixed(2)})!`);
 };
 
+/*if (-10) {
+    console.log(`+`)
+} else {
+    console.log(`-`)
+}
+*/
 /*
 const licenceName = 'Sefa';
 const birthYear = 1992;
