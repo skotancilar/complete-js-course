@@ -1,6 +1,6 @@
-/////////////// CODING CHALANGE 1 ////////////////
+/////////////// CODING CHALANGE 1 - 2 ////////////////
 console.log(`----------SCRIPTS----------`)
-/*let markMass1 = 78,
+let markMass1 = 78,
     markMass2 = 95,
     markHeight1 = 1.69,
     markHeight2 = 1.88,
@@ -21,7 +21,17 @@ console.log(markBMI2, johnBMI2);
 MarkHigherBmi = markBMI1 > johnBMI1;
 
 console.log(MarkHigherBmi);
-*/
+
+const std = setToDecimal = (el, para) => {
+    return parseFloat((el.toFixed(para)));
+}
+
+if (markBMI1 > johnBMI1) {
+    console.log(`Mark's BMI (${std(markBMI1, 2)}) is higher than John's BMI (${std(johnBMI1, 2)})`);
+} else {
+    console.log(`John's BMI (${std(johnBMI1, 2)}) is lower than Mark's BMI (${std(markBMI1, 2)})!`);
+};
+
 /*
 const licenceName = 'Sefa';
 const birthYear = 1992;
@@ -30,9 +40,9 @@ let age = now.getYear() - birthYear;
 let yearsLeft = 18 - age;
 
 if (age < 18) {
-    console.log(`${licenceName} can start driving license 🚗.`)
+    console.log(`${ licenceName } can start driving license 🚗.`)
 } else {
-    console.log(`${licenceName} is too young. Wait for another ${yearsLeft}  years.`)
+    console.log(`${ licenceName } is too young.Wait for another ${ yearsLeft }  years.`)
 }
 
 let century;
@@ -52,6 +62,6 @@ if (century % 10 === 1) {
     rank = ranks[2];
 };
 
-console.log(`${century}${rank} century`);
+console.log(`${ century } ${ rank } century`);
 */
 
