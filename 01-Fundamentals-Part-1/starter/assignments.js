@@ -62,7 +62,7 @@ if (population > 33) {
 // LECTURE 18: EQUALITY OPERATORS: == VS. ===
 
 //1
-const numNeighbors = Number(prompt(`How many counties does your country have?`));
+/*const numNeighbors = Number(prompt(`How many counties does your country have?`));*/
 // 2-3-4-5-6-7
 if (numNeighbors === 1) {
     console.log(`Only ${numNeighbors} border!`);

@@ -1,5 +1,5 @@
 /////////////// CODING CHALANGE 1 - 2 ////////////////
-console.log(`----------SCRIPTS----------`)
+/*console.log(`----------SCRIPTS----------`)
 let markMass1 = 78,
     markMass2 = 95,
     markHeight1 = 1.69,
@@ -24,7 +24,7 @@ console.log(MarkHigherBmi);
 
 /*const std = setToDecimal = (el, para) => {
     return parseFloat((el.toFixed(para)));
-}*/
+}
 
 if (markBMI1 > johnBMI1) {
     console.log(`Mark's BMI (${markBMI1.toFixed(2)}) is higher than John's BMI (${johnBMI1.toFixed(2)})`);
@@ -70,4 +70,29 @@ if (century % 10 === 1) {
 
 console.log(`${ century } ${ rank } century`);
 */
+/////////////// CODING CHALANGE 3 ////////////////
+averageDolphins = (97 + 112 + 101) / 3;
+averageKoalas = (109 + 95 + 106) / 3;
 
+console.log(averageKoalas);
+console.log(averageDolphins);
+
+if (averageDolphins > averageKoalas) {
+    console.log(`The Winner is DOLPHINS`);
+} else if (averageKoalas > averageDolphins) {
+    console.log(`The Winner is KOALAS`);
+} else {
+    console.log(`No winner`);
+}
+
+//////////////////////////////////////////////
+
+if ((averageDolphins > averageKoalas) && (averageDolphins >= 100)) {
+    console.log(`The Winner is DOLPHINS`);
+} else if (averageKoalas > averageDolphins && (averageKoalas >= 100)) {
+    console.log(`The Winner is KOALAS`);
+} else if ((averageKoalas === averageDolphins) && (averageKoalas >= 100) && (averageDolphins >= 100)) {
+    console.log(`DRAW!`);
+} else {
+    console.log(`NO Winner`);
+}
