@@ -17,7 +17,7 @@ console.log(typeof language);
 language = 'Turkish';
 console.log(language);
 
-// BASIC OPERATORS
+// LECTURE 12:BASIC OPERATORS
 //1
 function divideCountryPopulation(country, divideTo = 2) {
     if (country === 'Turkey') {
@@ -44,5 +44,8 @@ console.log(population > 33);
 
 //5
 
-let description = country + ' is in ' + continent + ' and it has ' + population + ' people speak ' + language;
+let description = country + ' is in ' + continent + ' and it has ' + population + ' million people speak ' + language;
 console.log(description);
+
+// LECTURE 17:BASIC OPERATORS
+description = `${country} is in ${continent} and it has ${population} million people speak ${language}`;
