@@ -79,8 +79,17 @@ const myCountry = {
     capital: 'Ankara',
     language: 'Turkish',
     population: 85,
-    neighbours: ['Bulgaria', 'Greece', 'Georgia', 'Azerbaijan', 'Armenia, Iran', 'Iraq', 'Syria']
+    neighbours: ['Bulgaria', 'Greece', 'Georgia', 'Azerbaijan', 'Armenia, Iran', 'Iraq', 'Syria'],
+    describe: function () {
+        return console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`)
+    },
+    checkIsland: function () {
+        this.neighbours.length > 0 ? this.isIsland = true : this.isIsland = false;
+        return console.log(this.isIsland);
+    }
 }
+
+//LECTURE 43:LECTURE: DOT VS. BRACKET NOTATION
 
 console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
 
@@ -89,3 +98,8 @@ console.log(myCountry.population);
 
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+
+//OBJECT METHODS
+
+myCountry.describe();
+myCountry.checkIsland();
