@@ -1,3 +1,4 @@
+console.log(`----------ASSIGNMENTS----------`)
 //LECTURE 33: FUNCTIONS
 
 function describeCountry(country, population, capitalCity) {
