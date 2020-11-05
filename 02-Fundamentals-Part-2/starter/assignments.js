@@ -32,3 +32,27 @@ popPakistan = percentageOfWorld2(200);
 popUSA = percentageOfWorld2(300);
 
 console.log(popTurkey, popPakistan, popUSA);
+
+//LECTURE 35: ARROW FUNCTIONS
+
+const percentageOfWorld3 = population => Number(((population / worldPopulation) * 100).toFixed(2));
+
+popTurkey = percentageOfWorld3(85);
+popPakistan = percentageOfWorld3(200);
+popUSA = percentageOfWorld3(300);
+
+console.log(popTurkey, popPakistan, popUSA);
+
+//LECTURE 36: FUNCTIONS CALLING OTHER FUNCTIONS
+
+const describePopulation = (country, population) => {
+    return `${country} has ${population} million people, which is about ${percentageOfWorld3(population)} of the world`
+}
+
+const tr = describePopulation('Turkey', 85);
+const pk = describePopulation('Pakistan', 200)
+const us = describePopulation('USA', 300);
+
+console.log(`${tr} 
+${pk} 
+${us}`);
