@@ -57,3 +57,17 @@ const us = describePopulation('USA', 300);
 console.log(`${tr} 
 ${pk} 
 ${us}`);
+
+
+//LECTURE 39: BASIC ARRAY OPARATIONS
+
+const countries = ['Turkey', 'Pakistan', 'USA', 'Spain'];
+const populations = [85, 200, 300, 47];
+
+console.log(populations);
+
+const percentages = [percentageOfWorld3(populations[0]), percentageOfWorld3(populations[1]),
+percentageOfWorld3(populations[2]),
+percentageOfWorld3(populations[3])];
+
+console.log(percentages);
