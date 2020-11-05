@@ -71,3 +71,21 @@ percentageOfWorld3(populations[2]),
 percentageOfWorld3(populations[3])];
 
 console.log(percentages);
+
+//LECTURE 42:INTRODUCTION TO OBJECTS
+
+const myCountry = {
+    country: 'Turkey',
+    capital: 'Ankara',
+    language: 'Turkish',
+    population: 85,
+    neighbours: ['Bulgaria', 'Greece', 'Georgia', 'Azerbaijan', 'Armenia, Iran', 'Iraq', 'Syria']
+}
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
