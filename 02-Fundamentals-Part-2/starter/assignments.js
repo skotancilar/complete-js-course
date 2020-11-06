@@ -79,7 +79,7 @@ const myCountry = {
     capital: 'Ankara',
     language: 'Turkish',
     population: 85,
-    neighbours: ['Bulgaria', 'Greece', 'Georgia', 'Azerbaijan', 'Armenia, Iran', 'Iraq', 'Syria'],
+    neighbours: ['Bulgaria', 'Greece', 'Georgia', 'Azerbaijan', 'Armenia', 'Iran', 'Iraq', 'Syria'],
     describe: function () {
         return console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`)
     },
@@ -107,9 +107,10 @@ myCountry.checkIsland();
 //LECTURE 46: ITERATION: THE FOR LOOP
 
 for (let i = 1; i <= 50; i++) {
-    //console.log(`Voter number ${i} is currently voting`);
+    console.log(`Voter number ${i} is currently voting`);
 }
 
+//LECTURE 47: LOOPING ARRAYS, BREAKING AND CONTINUING
 let percentages2 = []
 for (let i = 0; i < populations.length; i++) {
     if (percentages[i] !== percentages2[i]) {
@@ -119,3 +120,19 @@ for (let i = 0; i < populations.length; i++) {
 
 console.log(...percentages2);
 console.log(...countries)
+
+//LECTURE 48:  LOOPING BACKWARDS AND LOOPS IN LOOPS
+
+for (let i = (myCountry.neighbours.length - 1); i >= 0; i--) {
+    console.log(`Neighbour: ${myCountry.neighbours[i]}`);
+}
+
+//LECTURE 49:  THE WHILE LOOP
+
+let j = 0;
+let percentages3 = []
+while (j < populations.length) {
+    percentages3[j] = percentageOfWorld1(populations[j]).toFixed(2);
+    j++;
+}
+console.log(...percentages3);
