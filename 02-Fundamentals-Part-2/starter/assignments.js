@@ -103,3 +103,19 @@ console.log(myCountry.population);
 
 myCountry.describe();
 myCountry.checkIsland();
+
+//LECTURE 46: ITERATION: THE FOR LOOP
+
+for (let i = 1; i <= 50; i++) {
+    //console.log(`Voter number ${i} is currently voting`);
+}
+
+let percentages2 = []
+for (let i = 0; i < populations.length; i++) {
+    if (percentages[i] !== percentages2[i]) {
+        percentages2[i] = percentageOfWorld1(populations[i]).toFixed(2); continue
+    }
+}
+
+console.log(...percentages2);
+console.log(...countries)
