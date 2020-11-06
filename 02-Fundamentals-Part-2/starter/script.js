@@ -61,7 +61,7 @@ console.log(`${Sefa.firstName} has ${Sefa.friends.length} friends, and his best 
 */
 
 /////////////// CODING CHALANGE 3 ////////////////
-
+/*
 const Mark = {
     fullName: 'Mark Miller',
     mass: 78,
@@ -92,3 +92,51 @@ if (Mark.bmi > John.bmi) {
 } else {
     console.log('Both have same BMI');
 };
+
+for (let i = 1; i <= 10; i++) {
+    console.log(` Lifting weights repetition ${i} 🏋️‍♀️`);
+}
+
+
+const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+
+console.log(...days)
+*/
+
+/////////////// CODING CHALANGE 4 /////////
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTips = () => {
+    for (let i = 0; i < bills.length; i++) {
+        let percentage = bills[i] >= 50 && bills[i] <= 300 ? 0.15 : 0.2;
+        let calculatedTip = percentage * bills[i];
+        tips.push(calculatedTip);
+        let calculatedTotal = tips[i] + bills[i];
+        totals.push(calculatedTotal);
+    }
+}
+
+calcTips();
+console.log(...bills)
+console.log(...tips);
+console.log(...totals);
+
+
+
+let average;
+let sum = 0
+const calcAverage = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    average = sum / arr.length;
+    return average;
+}
+
+console.log(calcAverage(totals));
+
+
