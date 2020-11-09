@@ -79,9 +79,3 @@ function playAgain() {
       domNumber.textContent = '?';
    }
 };
-
-
-
-
-
-
