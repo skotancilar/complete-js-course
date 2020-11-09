@@ -22,7 +22,7 @@ function fnrandomNumber() {
 }
 
 fnrandomNumber();
-console.log(randomNumber);
+//console.log(randomNumber);
 
 //CHECK NUMBER
 function checkNumber() {
@@ -41,7 +41,7 @@ function checkNumber() {
          domScore.textContent = --score;
          domMessage.textContent = '🔽 Too Low!';
       }
-
+      // If player lost all score
    } else if (score <= 1) {
       domScore.textContent = '0'
       domMessage.textContent = '💥 You lost the game \n\ Please Try Again!';
@@ -60,7 +60,6 @@ function checkNumber() {
          domHighScore.textContent = score;
          domHighScore.value = score;
       }
-      //score >= domHighScore.value ? domHighScore.textContent = score : console.log('Hata');
    }
    return score;
 }
