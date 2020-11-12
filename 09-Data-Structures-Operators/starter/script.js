@@ -1,5 +1,44 @@
 'use strict';
-/////////////////////// CODING CHALANGE 3///////////////////
+//DOM AREA
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+// The Callback Function
+function camelCase() {
+  const rawStr = document.getElementsByTagName('textarea')[0].value
+  const arrified = rawStr.split('\n');
+  console.log(arrified);
+  for (const n of arrified) {
+    //Normalize strings
+    const x = n.toLowerCase().trim();
+
+    //Divide the words for two parts
+    const [firstPart, secondPart] = x.split('_');
+
+    //Capitilize First Letter of Second Word
+    const secondPartV2 = secondPart[0].toUpperCase() + secondPart.slice(1, secondPart.length);
+
+    //Combine and get camelCase word
+    const checkPoint = (firstPart + secondPartV2).replace('_', '');
+
+    //Add emojis as per instructions
+    const result = checkPoint.padEnd('20', ' ') + '✅'.repeat(arrified.indexOf(n) + 1);
+    console.log(result);
+  }
+};
+
+// CONVERTER BUTTON
+document.getElementsByTagName('button')[0].addEventListener('click', camelCase);
+
+// RESULT
+// underscoreCase    ✅
+// firstName         ✅✅
+// someVariable      ✅✅✅
+// calculateAge      ✅✅✅✅
+// delayedDeparture  ✅✅✅✅✅
+
+
+/* /////////////////////// CODING CHALANGE 3///////////////////
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
   [36, '🔁 Substitution'],
@@ -32,7 +71,7 @@ console.log(str)
 for (const [key, value] of gameEvents) {
   const str = `[${key <= 45 ? 'FIRST HALF' : 'SECOND HALF'}] ${key}: ${value}`
   console.log(str);
-}
+} */
 
 /* const restaurant = {
   name: 'Classico Italiano',
