@@ -1,6 +1,6 @@
 'use strict';
 
-const restaurant = {
+/* const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
@@ -21,4 +21,135 @@ const restaurant = {
       close: 24,
     },
   },
+}; */
+
+/////////////////// CODING CHALANGE ///////////////////
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
+// 1
+
+for (const [i, el] of game.scored.entries()) {
+  const str = `Goal ${i}: ${el}`;
+  console.log(str);
+}
+
+//2
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds)
+  average += odd;
+average /= odds.length;
+console.log(average);
+
+// 3
+
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
+}
+
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+}
+
+/* // 1
+const [players1, players2] = [game.players[0], game.players[1]]
+
+console.log(...players1);
+console.log(...players2);
+
+// 2
+const [gk1, ...fieldPlayers1] = [...players1];
+
+console.log(gk1);
+console.log(...fieldPlayers1);
+
+// 3
+const allPlayers = [...players1, ...players2];
+
+console.log(...allPlayers);
+
+// 4
+const subPlayers1 = ['Thiago', 'Coutinho', 'Perisic'];
+const players1Final = [...players1, ...subPlayers1];
+
+console.log(...subPlayers1);
+
+// 5
+const { team1, draw, team2 } = game.odds;
+console.log(team1, draw, team2);
+
+// 6
+const garr = ['Davies', 'Muller', 'Lewandowski', 'Kimmich']
+
+function printGoals(...players) {
+  console.log(...players);
+  console.log(`${players.length} goals were scored`);
+}
+
+printGoals(...garr);
+printGoals(...game.scored)
+
+//7
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win'); */
+
+
+
+
+
+
+// const arrOdds = Object.values(game.odds)
+
+/* function averageOdd() {
+  let sum = 0;
+  for (const [i] of game.odds.values()) {
+    sum += i;
+  }
+  return average = Number((sum / game.odds.values().length).toFixed(2));
+}
+
+const avOdds = averageOdd()
+console.log(avOdds); */
