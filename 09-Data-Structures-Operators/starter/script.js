@@ -1,4 +1,38 @@
 'use strict';
+/////////////////////// CODING CHALANGE 3///////////////////
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🟨 Yellow card'],
+  [69, '🟥 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '🟨 Yellow card'],
+]);
+
+//1
+const events = new Set(gameEvents.values());
+console.log(...events);
+
+//2
+gameEvents.delete(64);
+//console.log(...gameEvents);
+
+//3
+const time = [...gameEvents.keys()].pop();
+const x = Math.trunc(time / gameEvents.size)
+const str = `An event happened, on an average, every ${x} minutes"`
+console.log(str)
+
+//4
+for (const [key, value] of gameEvents) {
+  const str = `[${key <= 45 ? 'FIRST HALF' : 'SECOND HALF'}] ${key}: ${value}`
+  console.log(str);
+}
 
 /* const restaurant = {
   name: 'Classico Italiano',
@@ -25,7 +59,7 @@
 
 /////////////////// CODING CHALANGE ///////////////////
 
-const game = {
+/* const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
   players: [
@@ -92,7 +126,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
 const scorers = {};
 for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-}
+} */
 
 /* // 1
 const [players1, players2] = [game.players[0], game.players[1]]
