@@ -20,6 +20,7 @@ It is different from Promise.race() as that method short-circuits once one of th
 
 ### Example 1a: Even though a promise is rejected earlier than a resolved promise, Promise.any() will return the first resolved promise.
 
+```javascript
 Promise.any([
 new Promise((resolve, reject) => setTimeout(reject, 200, 'Third')),
 new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Second')),
@@ -28,13 +29,13 @@ new Promise((resolve, reject) => setTimeout(resolve, 2000, 'First')),
 .then(value => console.log(`Result: ${value}`))
 .catch (err => console.log(err))
 
-/\***\* Output \*\***/
+****Output****
 // Result: Second
-
----
+```
 
 ### Example 1b: When all the promises are rejected, AggregateError is thrown.
 
+```javascript
 Promise.any([
 Promise.reject('Error 1'),
 Promise.reject('Error 2'),
@@ -43,17 +44,17 @@ Promise.reject('Error 3')
 .then(value => console.log(`Result: ${value}`))
 .catch (err => console.log(err))
 
-/\***\* Output \*\***/
+***Output***
 // AggregateError: All promises were rejected
-
----
+```
 
 ## Logical Operators and Assignment Expressions
 
 In JavaScript, there are many assignment operators and Logical operators like the following basic example:
 
-// Assignment Operator Example
+Assignment Operator Example
 
+```javascript
 let num = 5
 num+=10
 console.log(num) // 15
@@ -62,8 +63,7 @@ let num1 = 6
 let num2 = 3
 console.log(num1 === 6 && num2 === 2) // false
 console.log(num1 === 6 || num2 === 2) // true
-
----
+```
 
 With the new proposal, we will be able to combine logical operators and assignment operators. Below are some examples of &&, || and ?? operators:
 
@@ -71,22 +71,24 @@ With the new proposal, we will be able to combine logical operators and assignme
 
 It assign RHS variable value to LHS variable, only if LHS value is truthy.
 
-// Logical Assignment Operator with && operator
+Logical Assignment Operator with && operator
+
+```javascript
 let num1 = 5
 let num2 = 10
 
 num1 &&= num2
-
 console.log(num1) // 10
 
 // Line 5 can also be written as following ways
 // 1. num1 && (num1 = num2)
 // 2. if (num1) num1 = num2
-
+```
 ### Logical Assignment Operator with || operator
 
 It assign RHS variable value to LHS variable, only if LHS value is falsy.
 
+```javascript
 let num1
 let num2 = 10
 
@@ -97,10 +99,13 @@ console.log(num1) // 10
 // Line 5 can also be written as following ways
 // 1. num1 || (num1 = num2)
 // 2. if (!num1) num1 = num2
+```
 
 ### Logical Assignment Operator with ?? operator
 
 ES2020 has introduced the Nullish Coalescing operator, this operator can be combined with assignment operators as well. It assign RHS variable value to LHS variable, only if LHS is undefined or null only.
+
+```javascript
 let num1
 let num2 = 10
 
@@ -110,14 +115,14 @@ console.log(num1) // 10
 num1 = false
 num1 ??= num2
 console.log(num1) // false
-
 // Line 5 can also be written as following ways
 // num1 ?? (num1 = num2)
-
+```
 ## Numeric Separators
 
 The introduction of Numlet num1
 
+```javascript
 let num2 = 10
 
 num1 ||= num2
@@ -126,19 +131,20 @@ console.log(num1) // 10
 
 // Line 5 can also be written as following ways
 // 1. num1 || (num1 = num2)
-// 2. if (!num1) num1 = num2eric Separators will make it easier to read numeric values by using the \_ (underscore) character to provide a separation between groups of digits. For example:
+// 2. if (!num1) num1 = num2eric Separators will make it easier to read numeric values by using the \_ (underscore) character to provide a separation between groups of digits. 
+```
+For example:
 
 ## Intl.ListFormat
 
 The ListFormat Object takes two parameters, both of them are optional. First parameter is language (locale) and second parameter is an options object that has two properties — style and type.
 
-new Intl.ListFormat([locales[, options]])
+```new Intl.ListFormat([locales[, options]])```
 
 The Intl.ListFormat has a method called format(), which receives an array as an argument and format it in different ways that are language dependent.
 Given below are some examples which has combination of different locales and options.
 
----
-
+```javascript
 const arr = ['Pen', 'Pencil', 'Paper']
 
 let obj = new Intl.ListFormat('en', { style: 'short', type: 'conjunction' })
@@ -172,8 +178,7 @@ console.log(obj.format(arr))
 
 /\***\* Output \*\***/
 // Pen, Pencil und Paper
-
----
+```
 
 ## dateStyle and timeStyle options for Intl.DateTimeFormat
 
@@ -181,8 +186,7 @@ The Intl.DateTimeFormat object is a constructor for objects that enable language
 
 ### Some examples of different options and language(locale) are illustrated below:
 
----
-
+```javascript
 // Time only with short format
 let o = new Intl.DateTimeFormat('en' , { timeStyle: 'short' })
 console.log(o.format(Date.now()))
@@ -212,13 +216,12 @@ console.log(o.format(Date.now()))
 o = new Intl.DateTimeFormat('en' , { dateStyle: 'long'})
 console.log(o.format(Date.now()))
 // October 6, 2020
-
+```
 ---
 
 ### dateStyle and timeStyle options used together with different language tags, as shown in the example below:
 
----
-
+```javascript
 let abc
 
 // English language
@@ -235,7 +238,7 @@ console.log(abc.format(Date.now()))
 abc = new Intl.DateTimeFormat('de' , { timeStyle: 'short', dateStyle: 'long'})
 console.log(abc.format(Date.now()))
 // 6. Oktober 2020 um 23:40
-
+```
 ---
 
 ## Conclusion
