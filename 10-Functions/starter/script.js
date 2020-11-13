@@ -1,4 +1,61 @@
 'use strict';
+////////////////////////CLOSURES////////////////////////
+
+let foo;
+const secureBooking = function () {
+   let passengerCount = 0;
+   let x = 10
+   // return funtion () { "kodlar" } 'da yapılıp global scopeta secureBooking foo'ya eşitlenebilir.
+   foo = function () {
+      passengerCount++;
+      x--;
+      if (x > 0) { console.log(`${passengerCount} passengers bought ticket and ${x} seat remain`); }
+      else {
+         console.log(`No seat left`);
+      }
+   }
+};
+
+const goo = function () {
+   let a = 2;
+   console.log(a);
+   foo = function () {
+      a *= 2;
+      console.log(a)
+   }
+};
+
+
+secureBooking();
+foo(); foo(); foo(); foo(); //4 passengers bought ticket and 6 seat remain
+//RESET secureBooking()
+goo(); foo(); foo(); foo(); //16
+//RESET foo()
+secureBooking();
+foo(); foo(); foo(); foo(); //4 passengers bought ticket and 6 seat remain
+//RESET secureBooking()
+goo();
+foo(); foo(); foo(); foo(); //16
+console.dir(foo);
+// document.querySelector('.poll').addEventListener('click', booking);
+
+const boardPassengers = function (n, wait) {
+   const perGroup = n / 3;
+
+   setTimeout(function () {
+      console.log(`We are now boarding all ${n} passengers`);
+      console.log(`There are 3 groups, each with ${perGroup} passengers`);
+   }, wait * 1000);
+
+   console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000; // colosure's perGroup in use (180)
+boardPassengers(180, 3);
+
+
+
+
 /* //////////////////////// CODING CHALANGE ////////////////
 
 const poll = {
