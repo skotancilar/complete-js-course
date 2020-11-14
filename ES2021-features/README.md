@@ -1,6 +1,8 @@
+# Exciting Features of Javascript ES2021 (ES12)
+
 -[source page](https://codeburst.io/exciting-features-of-javascript-es2021-es12-1de8adf6550b)
 
-# List of the new features discussed in this article
+## List of the new features discussed in this article
 
 - String.prototype.replaceAll
 - Promise.any
@@ -20,7 +22,7 @@ The proposed method `replaceAll()` returns a new string with all matches of a pa
 ES2021 will introduce `Promise.any()` method which short-circuits and returns a value, as soon as it hits the first resolved promise from the list/array of promises (as explained in Example 1a). If all the promises are rejected then it will throw an aggregated error message (as illustrated in Example 1b).
 It is different from `Promise.race()` as that method short-circuits once one of the given promises either resolves or rejects.
 
-### Example 1a: Even though a promise is rejected earlier than a resolved promise, `Promise.any()` will return the first resolved promise.
+### Example 1a: Even though a promise is rejected earlier than a resolved promise, `Promise.any()` will return the first resolved promise
 
 ```javascript
 Promise.any([
@@ -35,7 +37,7 @@ Promise.any([
 // Result: Second
 ```
 
-### Example 1b: When all the promises are rejected, AggregateError is thrown.
+### Example 1b: When all the promises are rejected, AggregateError is thrown
 
 ```javascript
 Promise.any([
@@ -192,7 +194,7 @@ console.log(obj.format(arr));
 
 The `Intl.DateTimeFormat` object is a constructor for objects that enable language-sensitive date and time formatting. The proposed dateStyle and timeStyle options can be used to request a locale-specific date and time of a given length.
 
-### Some examples of different options and language(locale) are illustrated below:
+### Some examples of different options and language(locale) are illustrated below
 
 ```javascript
 // Time only with short format
@@ -226,7 +228,7 @@ console.log(o.format(Date.now()));
 // October 6, 2020
 ```
 
-### `dateStyle` and `timeStyle` options used together with different language tags, as shown in the example below:
+### `dateStyle` and `timeStyle` options used together with different language tags, as shown in the example below
 
 ```javascript
 let abc;
