@@ -113,7 +113,7 @@ currencies.forEach(function (value, key, map) {
 });
  */
 
-const juliasList = [9, 16, 6, 8, 3];
+/* const juliasList = [9, 16, 6, 8, 3];
 const katesList = [10, 5, 6, 1, 4];
 
 
@@ -128,4 +128,78 @@ const checkDogs = function (juliasList, katesList) {
   });
 }
 
-checkDogs(juliasList, katesList);
+checkDogs(juliasList, katesList); */
+
+/* //MAP METHOD
+let arr = [4, 2, 7, 3, 1, 6, 8, 9];
+const newArr1 = arr.map(function (value) {
+  return value * 2;
+});
+
+console.log(...newArr1);
+
+const newArr2 = arr.map(function (value) {
+  return value > 5;
+});
+
+console.log(...newArr2);
+
+const newArr3 = arr.map(value => value * 3);
+console.log(...newArr3);
+
+const newArr4 = arr.map((value, key, arr) => {
+  console.log(...arr);
+  `Movement ${key + 1}:  You deposited ${value}`
+
+  if (value > 5) {
+    console.log(`Movement ${key + 1}: You deposited ${value}`);
+  } else {
+    console.log(`Movement ${key + 1}: You withdrew ${Math.abs(value)}`);
+  }
+}); */
+
+/* /////////////// CODING CHALANGE 2 ////////////////
+const ages1 = [5, 2, 4, 1, 15, 8, 3];
+const ages2 = [16, 6, 10, 5, 6, 1, 4]
+
+function calcAverageHumanAge(dogAges) {
+  let humanAges = dogAges.map(dogAge => {
+    if (dogAge <= 2) {
+      return 2 * dogAge;
+    } else if (dogAge > 2) {
+      return 16 + dogAge * 4
+    }
+  })
+  let aduts = humanAges.filter(humanAge => humanAge >= 18
+  )
+
+  let average = aduts.reduce((acc, cur) => acc + cur, 0) / aduts.length;
+  return average;
+}
+
+const avg1 = calcAverageHumanAge(ages1);
+const avg2 = calcAverageHumanAge(ages2);
+
+console.log(avg1, avg2); */
+
+/* /////////////// CODING CHALANGE 3 ////////////////
+const ages1 = [5, 2, 4, 1, 15, 8, 3];
+const ages2 = [16, 6, 10, 5, 6, 1, 4]
+
+function calcAverageHumanAge(dogAges) {
+  let average = dogAges.map(dogAge => {
+    if (dogAge <= 2) {
+      return 2 * dogAge;
+    } else if (dogAge > 2) { return 16 + dogAge * 4 }
+  })
+    .filter(humanAge => humanAge >= 18)
+    .reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+  return average;
+}
+
+const avg1 = calcAverageHumanAge(ages1);
+const avg2 = calcAverageHumanAge(ages2);
+
+console.log(avg1, avg2);*/
+
