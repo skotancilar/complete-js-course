@@ -116,13 +116,16 @@ currencies.forEach(function (value, key, map) {
 const juliasList = [9, 16, 6, 8, 3];
 const katesList = [10, 5, 6, 1, 4];
 
-var juliasCorectedList = juliasList.splice(1, 2);
-console.log(...juliasCorectedList);
 
-const fullList = juliasCorectedList.concat(katesList)
-console.log(...fullList);
+const checkDogs = function (juliasList, katesList) {
+  var juliasCorectedList = juliasList.splice(1, 2);
 
-fullList.forEach(function (value, key) {
-  const str = `"Dog number ${key + 1} is ${value >= 3 ? `an adult, and is ${value} years old` : 'still puppy 🐶'}`
-  console.log(str);
-});
+  const fullList = juliasCorectedList.concat(katesList)
+
+  fullList.forEach(function (value, key) {
+    const str = `"Dog number ${key + 1} is ${value >= 3 ? `an adult, and is ${value} years old` : 'still puppy 🐶'}`
+    console.log(str);
+  });
+}
+
+checkDogs(juliasList, katesList);
