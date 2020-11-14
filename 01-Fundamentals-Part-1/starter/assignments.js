@@ -27,7 +27,7 @@ function divideCountryPopulation(country, divideTo = 2) {
         let newPopulation = population / divideTo;
         console.log(newPopulation);
     }
-};
+}
 
 divideCountryPopulation('Turkey');
 divideCountryPopulation('Armenia', 323);
@@ -57,7 +57,7 @@ if (population > 33) {
     console.log(`${country}'s population is above than average.`);
 } else {
     console.log(`${country}'s population ${33 - population} million below average.`);
-};
+}
 
 // LECTURE 22: EQUALITY OPERATORS: == VS. ===
 
@@ -70,7 +70,7 @@ if (numNeighbors === 1) {
     console.log(`More than 1 border!`);
 } else if (numNeighbors === 0) {
     console.log(`No borders!`);
-};
+}
 
 // LECTURE 22: THE CONDITIONAL (TERNARY OPERATOR)
 

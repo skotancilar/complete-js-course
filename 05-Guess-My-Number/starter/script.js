@@ -78,4 +78,4 @@ function playAgain() {
       score = 20;
       domNumber.textContent = '?';
    }
-};
+}
