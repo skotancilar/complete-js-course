@@ -16,7 +16,7 @@ console.log(descPakistan, descTurkey, descUSA);
 const worldPopulation = 7900;
 function percentageOfWorld1(population) {
     return (population / worldPopulation) * 100;
-};
+}
 
 let popTurkey = percentageOfWorld1(85);
 let popPakistan = percentageOfWorld1(200);

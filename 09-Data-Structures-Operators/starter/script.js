@@ -25,7 +25,7 @@ function camelCase() {
     const result = checkPoint.padEnd('20', ' ') + '✅'.repeat(arrified.indexOf(n) + 1);
     console.log(result);
   }
-};
+}
 
 // CONVERTER BUTTON
 document.getElementsByTagName('button')[0].addEventListener('click', camelCase);
