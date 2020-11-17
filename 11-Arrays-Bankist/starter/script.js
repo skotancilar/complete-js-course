@@ -202,4 +202,80 @@ const avg1 = calcAverageHumanAge(ages1);
 const avg2 = calcAverageHumanAge(ages2);
 
 console.log(avg1, avg2);*/
+/* let x = Array.from({ length: 100 }, (cur) => cur = Math.trunc(Math.random() * 100))
+
+let y = x.filter((value1, _, arr) => value1 === arr.find(value => value1 === value))
+
+
+console.log(...y);  */
+
+
+/////////////// CODING CHALANGE 4 ////////////////
+
+/* const dogs = [
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] },
+];
+
+
+//1
+const recommendedFood = dogs.map(cur => cur.recommendedFood = Number((cur.weight ** 0.75 * 28).toFixed(0)));
+
+const recFoodTopMargin = dogs.map(cur => cur.recFoodTopMargin = Number((cur.recommendedFood + cur.recommendedFood * 0.1).toFixed(0)));
+const recFoodBotMargin = dogs.map(cur => cur.recFoodBotMargin = Number((cur.recommendedFood - cur.recommendedFood * 0.1).toFixed(0)));
+
+const isEatingOkay = dogs.map(cur => cur.isEatingOkay = (cur.curFood >= cur.recFoodBotMargin && cur.curFood <= cur.recFoodTopMargin))
+
+
+console.log(recommendedFood);
+
+//2
+const dogsOwners = dogs.map(cur => cur.owners = cur.owners.join(','));
+
+console.log(dogsOwners);
+
+function isEatingOkayFn(cur) {
+  if (cur.isEatingOkay) {
+    console.log(`Sarah's dog eats health`);
+  } else if (cur.curFood >= cur.recFoodBotMargin) {
+    console.log(`Sarah's dog eats too much. Recommended food amounth is ${cur.recommendedFood} gr. It needs to eat ${Math.abs(cur.recommendedFood - cur.recFoodTopMargin)} less.`);
+  } else if (cur.curFood <= cur.recFoodBotMargin) {
+    console.log(`Sarah's dog eats too little. Recommended food amounth is ${cur.recommendedFood} gr. It needs to eat ${Math.abs(cur.recommendedFood - cur.recFoodBotMargin)} more.`);
+  }
+}
+
+for (const cur of dogs) {
+  if (cur.owners.includes('Sarah')) {
+    isEatingOkayFn(cur);
+  }
+}
+
+
+
+//3
+console.log(dogs[0].owners);
+console.log(dogsOwners);
+
+const ownersEatTooMuch = dogs.filter((cur) => cur.curFood > cur.recFoodTopMargin).map((cur) => cur.owners);
+const ownersEatTooLittle = dogs.filter(cur => cur.curFood < cur.recFoodBotMargin).map((cur) => cur.owners);
+
+console.log(ownersEatTooMuch, ownersEatTooLittle);
+
+const strMuch = ownersEatTooMuch.reverse().join(' and ')
+const strLittle = ownersEatTooLittle.join(' and ')
+
+console.log(`${strMuch}'s dogs eat too much.`);
+console.log(`${strLittle}'s dogs eat too little.`);
+
+//5
+console.log(dogs.some(cur => cur.curFood === cur.recommendedFood));
+//6
+console.log(dogs.some(cur => cur.isEatingOkay === true));
+//7
+console.log(dogs.filter(cur => cur.isEatingOkay)); */
+
+
+
 
